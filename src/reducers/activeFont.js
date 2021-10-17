@@ -1,12 +1,12 @@
 const initialState = {
-    activeFont: null
+    numberOfFont: null
 }
 
 export default function activeFontReducer(state = initialState, action) {
     switch (action.type) {
         case 'UPDATE_ACTIVE_FONT':
             return {
-                activeFont: action.payload
+                numberOfFont: action.payload
             };
         default:
             return state;

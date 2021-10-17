@@ -1,7 +1,7 @@
 
 const initialState = {
     contentLoading: true,
-    content: {},
+    contentData: {},
     contentErorr: null
 };
 
@@ -17,7 +17,7 @@ export default function contentReducer(state = initialState, action) {
                 ...state,
                 contentLoading: false,
                 contentErorr: null,
-                content: action.payload
+                contentData: action.payload
             };
         case 'GET_TABS_CONTENT_FAILURE':
             return {

@@ -15,8 +15,6 @@ import Content from "./Content";
 
 function FontsBlock (props) {
     const tabs = useSelector((state) => state.tabs)
-    const content = useSelector((state) => state.content)
-
     const [tabName, setTabName] = useState('fonts_a')
     function tabHandler (val) {
         setTabName(val)
@@ -27,8 +25,6 @@ function FontsBlock (props) {
     },[props, tabName])
     return (
         <Router>
-            <Switch>
-            </Switch>
             <div className="fonts-page page">
                 <header>
                     <h2 className="title">{tabName==='fonts_a'&&'Please select one font'}</h2>
@@ -47,7 +43,7 @@ function FontsBlock (props) {
                             // tried post request first and broke json, that is why this check below exists
                             tab.content_endpoint&&(
                             <Route key={index} path={'/'+tab.content_endpoint}>
-                                <Content content={content}/>
+                                <Content/>
                             </Route>
                             )
                         ))}
