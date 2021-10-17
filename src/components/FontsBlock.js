@@ -7,7 +7,6 @@ import Tab from "./Tab";
 import {
     BrowserRouter as Router,
     Redirect,
-    Switch,
     Route,
     NavLink
   } from "react-router-dom";

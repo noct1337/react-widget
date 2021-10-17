@@ -1,3 +1,9 @@
+import {
+    GET_TABS_STARTED,
+    GET_TABS_SUCCESS,
+    GET_TABS_FAILURE,
+  } from "../reducers/actionTypes";
+
 import axios from 'axios';
 
 export const getTabs = () => {
@@ -17,16 +23,16 @@ export const getTabs = () => {
 };
 
 const getTabsSuccess = tabs => ({
-    type: 'GET_TABS_SUCCESS',
+    type: GET_TABS_SUCCESS,
     payload: [...tabs]
 });
 
 const getTabsStarted = () => ({
-    type: 'GET_TABS_STARTED'
+    type: GET_TABS_STARTED
 });
 
 const getTabsFailure = error => ({
-    type: 'GET_TABS_FAILURE',
+    type: GET_TABS_FAILURE,
     payload: {
         error
     }

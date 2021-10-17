@@ -1,4 +1,9 @@
-
+import {
+    GET_TABS_STARTED,
+    GET_TABS_SUCCESS,
+    GET_TABS_FAILURE,
+  } from "./actionTypes";
+  
 const initialState = {
     loading: true,
     tabs: [],
@@ -7,19 +12,19 @@ const initialState = {
 
 export default function tabsReducer(state = initialState, action) {
     switch (action.type) {
-        case 'GET_TABS_STARTED':
+        case GET_TABS_STARTED:
             return {
                 ...state,
                 loading: true
             };
-        case 'GET_TABS_SUCCESS':
+        case GET_TABS_SUCCESS:
             return {
                 ...state,
                 loading: false,
                 error: null,
                 tabs: action.payload
             };
-        case 'GET_TABS_FAILURE':
+        case GET_TABS_FAILURE:
             return {
                 ...state,
                 loading: false,
