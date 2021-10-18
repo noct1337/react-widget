@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 export default function Content (props) {
     const storeContent = useSelector((state) => state.content)
     const activeFont = useSelector((state) => state.activeFont)
-    console.log(storeContent)
     if (storeContent.contentLoading) {
         return (
             <div>Loading...</div>
