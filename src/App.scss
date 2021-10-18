@@ -91,18 +91,20 @@ html, body, #root, .App, .page  {
           border-radius: 10px;
         }
       }
-      h3 {
-        display: flex;
-        font-weight: bold;
-        max-width: 190px;
+      ul {
 
-        &:before {
-          content: '';
-          width: 10px;
-          height: 5px;
-          margin: 5px 10px 0 0;
-          background: #858585;
-          border-radius: 60px;
+
+        li {
+          display: list-item;
+          list-style: disc;
+          margin-left: 20px;
+          font-weight: bold;
+          max-width: 140px;
+
+          &::marker {
+            color: #d3d3d3;
+            font-size: 24px;
+          }
         }
       }
     }
@@ -138,7 +140,7 @@ html, body, #root, .App, .page  {
         align-items: center;
       }
       &__font {  
-        h3 {
+        li {
           margin-left: 10px;
         }      
         .square p {

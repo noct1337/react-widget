@@ -10,7 +10,9 @@ export default function Font (props) {
     return (
         <div className={`content-part__font ${props.activeFont === props.index?'active':''}`} onClick={()=> clickHandler()} onKeyPress={()=> clickHandler()} tabIndex="0">
             <div className={`square`}><p style={props.styles}>{props.el.abbr}</p></div>
-            <h3>{props.el.label}</h3>
+            <ul>
+                <li>{props.el.label}</li>
+            </ul>
         </div>
     )
 }
